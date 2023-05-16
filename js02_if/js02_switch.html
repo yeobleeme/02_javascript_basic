@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 1. switch 조건문
+		let num = 18;
+		if (Number(num) % 2 == 0)  document.write('짝수') 
+		else document.write('홀수')
+		document.write('<hr>')
+	
+		switch (num%2==0) {
+			case 0: 
+				document.write('짝수<br>');
+				break;
+			case 1: 
+				document.write('홀수<br>');
+				break;
+			default: 
+				document.write('숫자가 아닙니다.<br>');
+		}
+		    document.write('<hr>');
+
+
+		let score = 85;
+		
+		switch (true) {
+			case (score >= 95):
+				document.write('A+');
+				break;
+			case (score >= 90):
+				document.write('A');
+				break;
+			case (score >= 85):
+				document.write('B+');
+				break;
+			case (score >= 80):
+				document.write('B');
+				break;
+			case (score >= 75):
+				document.write('C+');
+				break;
+			case (score >= 70):
+				document.write('C');
+				break;
+			case (score >= 60):
+				document.write('D');
+				break;
+			default: 
+				document.write('F');
+		}
+		document.write('<hr>');
+	</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+	<script>
+
+		// if(5 > 2) {
+		// 	console.log(`비교결과 = true`);
+		// }
+		// console.log(`프로그램 종료`);
+
+
+
+		// 실습1. 나이(age)를 입력받아서 18이상이면 '성인입니다.'
+		// 단순 if () {}
+
+		// let age = Number(prompt('나이를 입력하세요.', 00));
+		
+		// if (age >= 18) {
+		// 	document.write('성인입니다.');
+		// }
+
+
+		// if + else
+		// if (조건식) { true... } else { false... }
+
+		// let age = Number(prompt ('나이를 입력하세요.', ));
+		// if (age >= 18) {
+		//  	document.write('<h3>성인입니다.</h3>');
+		//  } else {
+		// 	document.write('<h3>성인이 아닙니다.</h3>');
+		//  }
+
+
+    // 중첩 if
+		
+		// if (조건식) {
+		// 	if (조건식) {}
+		// 	if (조건식) {} else {}
+		// } else {
+		// 	if (조건식) {}
+		// 	if (조건식) {} else {}
+		// }
+		// 시간을 입력받아서 12시 이전일 경우 '오전' 아니면 '오후'
+    // 오전일 경우 9시 이전일 경우 '아침을 먹습니다.' 이후 '출근을 합니다.'
+		// 오후일 경우 18시 이전일 경우 '일을 합니다.' 이후 '퇴근을 합니다.'
+
+ 		//  let score = Number(prompt('점수를 입력하세요.', 00));
+		  let num = Number(prompt('숫자를 입력하세요.'));
+</script>
+</head>
+<body>
+
+<!-- <h3 id="demo";></h3> -->
+
+<!-- <script>
+if (score >= 95) {
+	result = "A+학점 입니다.";
+} else if (score >= 90) {
+  result = "A0학점 입니다.";
+} else if (score >= 85) {
+	result = "B+학점 입니다.";
+} else if (score >= 80) {
+	result = "B0학점 입니다.";
+} else if (score >= 75) {
+	result = "C+학점 입니다.";
+} else if (score >= 70) {
+	result = "C0학점 입니다.";
+} else if (score >= 60) {
+	result = "D 학점 입니다.";
+} else {
+	result = "F 학점 입니다.";
+}
+
+	document.getElementById("demo").innerHTML = result;
+
+// 		// if (hour < 12) {
+// 		// 	document.getElementById("demo1").innerHTML = "오전입니다.";
+// 		// 	if (hour < 9) {
+// 		// 		document.getElementById("demo2").innerHTML = "아침을 먹습니다.";
+// 		// 	} else {
+// 		// 		document.getElementById("demo2").innerHTML = "출근을 합니다.";
+// 		// 	}
+// 		// } else { 
+// 		// 	document.getElementById("demo1").innerHTML = "오후입니다.";
+// 		// 	if (hour < 18 ) {
+// 		// 		document.getElementById("demo2").innerHTML = "일을 합니다.";
+// 		// 	} else {
+// 		// 		document.getElementById("demo2").innerHTML = "퇴근을 합니다.";
+// 		// 	}
+// 		// }
+
+// 		// if () else if () {} ... else {}
+// 		if (hour <=9) {
+// 			document.getElementById("demo1").innerHTML = "오전입니다.";
+// 			document.getElementById("demo2").innerHTML = "아침을 먹습니다.";
+// 		} else if (hour <= 12) {
+// 			document.getElementById("demo1").innerHTML = "오전입니다.";
+// 			document.getElementById("demo2").innerHTML = "출근을 합니다.";
+// 		} else if (hour <= 18) {
+// 			document.getElementById("demo1").innerHTML = "오후입니다.";
+// 			document.getElementById("demo2").innerHTML = "일을 합니다.";
+// 		} else {
+// 			document.getElementById("demo1").innerHTML = "오후입니다.";
+// 			document.getElementById("demo2").innerHTML = "퇴근을 합니다.";
+// 		}
+	</script> -->
+
+	<script>
+		// 실습 - 임의 숫자를 입력받아서 해당 숫자가 짝수인지 홀수인지를 출력하세요.
+
+		// if (num === 0) {
+		// 	alert ("숫자가 입력되지 않았습니다.")
+		// } else {
+		// if (Number(num%2 == 0)) document.write("<h3>짝수</h3>"); 
+		// else document.write("<h3>홀수</h3>");
+		// }
+
+		// 조건연산자 (삼항연산자) ? : 
+
+		Number(num%2 == 0) ? document.write('짝수') : document.write('홀수')
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+  <p>점수를 입력하세요.</p>
+
+	<input id="score" value="80" />
+	
+	<button onclick="myFunction()">입력</button>
+
+	<p id="demo"></p>
+
+
+	<script>
+
+		function myFunction() {
+			let grade;
+			let score = 
+			Number(document.getElementById("score").value);
+			if (isNaN(score)) {
+				grade = "점수(숫자)가 아닙니다.";
+		} else if (score >= 95) {
+			grade = "A+";
+		} else if (score >= 90) {
+			grade = "A";
+		} else if (score >= 85) {
+			grade = "B+";
+		} else if (score >= 80) {
+			grade = "B";
+		} else if (score >= 75) {
+			grade = "C+";
+		} else if (score >= 70) {
+			grade = "C";
+		} else if (score >= 60) {
+			grade = "D";
+		} else {
+			grade = "F";
+		}
+		
+			document.getElementById("demo").innerHTML = grade + " 입니다."; 
+	}
+	</script>
+</body>
+</html>

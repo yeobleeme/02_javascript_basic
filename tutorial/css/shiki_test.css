@@ -1,0 +1,107 @@
+html, body, div, h1, h2, h3, h4, h5,
+p, address, figure,
+ul, ol, li, d1, dt, dd,
+table, th, td,
+section, nav, article, aside, header, footer {margin: 0; padding: 0;}
+
+section, nav, article, aside, figure, header, footer {display: block;}
+
+img {border: none; vertical-align: bottom;}
+
+ul li, ol li {list-style: none;}
+
+table {border-collapse: collapse; border-spacing: 0;}
+
+h1, h2, h3, h4, h5 {font-weight: normal;}
+
+input {outline: none;}
+
+/* links */
+a {
+    outline: none;
+    text-decoration: none;
+    color: #39c;
+}
+
+a:hover {
+    filter: alpha(opacity=70) !important;
+    -moz-opacity: .7 !important;
+    opacity: .7 !important;
+}
+
+.gHeader a, .gFooter a {
+    color: #191919;
+}
+
+/* clfix */
+.clfix{zoom: 1;}
+.clfix:before, .clfix:after {content: ""; display: table;}
+.clfix:after{clear: both;}
+
+.no-wrap {white-space: nowrap;}
+
+html {
+    color: #191919;
+    line-height: 1;
+    font-size: 62.5%;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+
+#contentsWrap {
+    width: 984px;
+    margin: 0 auto;
+    padding: 30px 0 0;
+    /* font-family: '','',; */
+}
+
+.gHeader {
+    position: relative;
+    width: 985px;
+    margin: 0 auto;
+    padding: 17px 0 93px;
+}
+
+.gHeader .logo {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+}
+
+.gHeader .gnav {
+    overflow: hidden;
+    zoom: 1;
+    float: right;
+    width: 657px;
+    padding: 39px 0 0;
+    font-size: 12px;
+    /* font-family: '','',; */
+    font-weight: bold;
+}
+
+.gHeader .gnav a:hover,
+.gHeader .gnav a:active {
+    filter: alpha(opacity=100) !important;
+    -moz-opacity: 1 !important;
+    opacity: 1 !important;
+    text-decoration: none;
+}
+
+.gHeader .gnav .gnavWrap {
+    float: left;
+    width: 144px;
+    margin: 0 24px 0 0;
+}
+
+.gHeader .gnav .gnavWrap .lastCol {
+    margin: 0;
+}
+
+.gHeader .gnav .lWrap {
+    padding: 1px 0 0 9px;
+}
+
+.gHeader .gnav .rWrap {
+    margin: 0 0 0 -9px;
+    padding: 1px 7px 0 9px;
+}

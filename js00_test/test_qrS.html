@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+
+		window.onload = () => {
+			let header1 = document.querySelector('#header-1');
+			let header2 = document.querySelector('#header-2');
+
+			header1.innerHTML = 'querySelector Method 1'
+			header2.innerHTML = 'querySelector Method 2'
+		}
+
+		window.onload = () => {
+			let headers = document.querySelectorAll('h3');
+			for (let i in headers) {
+				headers[i].innerHTML = 'querySelectorAll - ' + i;
+			}
+		}
+
+		window.onload = () => {
+			let header3 = document.querySelector('#header-3');
+			header3.style.border = '2px solid';
+			header3.style.color = 'blue';
+			header3.style.backgroundColor = 'orange';
+		}
+
+		window.onload = () => {
+			let header4 = document.querySelector('#header-4');
+			document.body.removeChild(header4);
+		}
+	</script>
+</head>
+<body>
+	
+	<h3 id="header-1" style="border:2px solid red; color:green; background-color: mediumseagreen;">Header</h3>
+	<h3 id="header-2">Header</h3>
+	<h3 id="header-3">Header</h3>
+	<h3 id="header-4">Header</h3>
+
+</body>
+</html>

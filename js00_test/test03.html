@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<h2>JavaScript Switch</h2>
+
+	<p id="demo"></p>
+
+	<script>
+		let notice;
+		switch (new Date().getDay()) {
+			case 6: 
+			notice = "Saturday";
+			break;
+			case 0: 
+			notice = "Sunday";
+			break;
+			default:
+			notice = "Waiting for the Weekend.";
+		}
+		document.getElementById("demo").innerHTML = notice;
+	</script>
+</body>
+</html>

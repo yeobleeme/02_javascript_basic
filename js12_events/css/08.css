@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "D2Coding";
+	font-size: 12px;
+	color: #000;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+h1 {
+	text-align: center;
+	padding: 10px 0;
+}
+
+#gnb {
+	width: 600px;
+	margin: 0 auto;
+}
+
+#gnb:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#gnb .n {
+	float: left;
+	width: 120px;
+	text-align: center;
+	position: relative;
+}
+
+#gnb .n > a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.4em;
+}
+
+#gnb .n.on > a {
+	border-bottom: 4px solid #725f3f;
+	box-sizing: border-box;
+}
+
+#gnb .n ul {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	width: 100%;
+	background: #000;
+	display: none;
+}
+
+#gnb .n ul li a {
+	display: block;
+	color: #fff;
+	padding: 12px 0;
+	border-bottom: 1px solid #333;
+}
+
+#gnb .n ul li:last-child a {
+	border: none;
+}
+
+#gnb .n ul li a:hover,
+#gnb .n ul li a:active,
+#gnb .n ul li a:focus {
+	background: #fff;
+	color: #000;
+}
+
+#visual {
+	background: url('../images/blackpink_01.jpg') no-repeat center center;
+	height: 300px;
+}
+
+#visual a {
+	display: block;
+	width: 100px;
+	height: 300px;
+	margin: 0 auto;
+	text-indent: -999999%;
+	overflow: hidden;
+}

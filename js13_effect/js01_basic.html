@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<title>Document</title>
+	<script>
+		/* jQuery Effect
+
+		A. effect method 
+
+		show() : 문서 객체를 보이기
+		hide() : 문서 객체를 숨기기
+		toggle() : show() hide() 번갈아 수행
+		slideDown() : 슬라이드 효과 보이기 
+		slideUp() : 슬라이드 효과 감추기
+		slideToggle() : slidedown() slideup () 번갈아 수행
+		fadeIn() : 서서히 보이기
+		fadeOut() : 서서히 감추기
+    fadeToggle() : fadein() fadeout() 번갈아 수행
+
+		B. effect 메서드 4가지 형태
+
+		1. $(선택자).method()
+		2. $(선택자).method(speed) : slow, normal, fast, 숫자(ms)
+		3. $(선택자).method(speed, 콜백함수) : 효과가 수행되는 동안 
+		    수행할 함수 (callback 함수)를 지정, 함수 수행 결과가 리턴
+		4. $(선택자).method(speed, easing, 콜백함수) : easing 애니메이션 효과 적용
+
+		*/
+
+		$(function() {
+			$('button').click(() => {
+				$('.page').slideToggle(1000, alert('...'));
+			})
+		})
+	</script>
+</head>
+<body>
+	<button>jQuery Effect - toggle</button>
+	<div class="page">
+		<h1>"SVB 사태로 미 기준금리 동결 가능성 높아"</h1>
+		<p>
+			미국 실리콘밸리은행(SVB) 붕괴로 금융시스템 불안이 커지면서 
+			미국 소비자물가지수(CPI)에 따라 이달 미 연방준비제도(Fed·연준)의 
+			기준금리 동결 결정이 나올 수도 있다는 전망이 나왔다.
+      김광석 한국경제산업연구원 연구실장은 13일(전일) YTN 생생경제에 출연해 
+			"SVB 사태가 연준의 기준금리 결정에 영향을 줄 것"이라면서 "모든 사람의 
+			현재 관심사는 결과적으로 기준금리 여부"라고 밝혔다.
+			그러면서 "현재 금융 불확실성이 커진 상황에서 시스템 불안도 커지면 
+			말 그대로 경제가 무너질 수 있다"고 덧붙였다.
+		</p>
+	</div>
+</body>
+</html>

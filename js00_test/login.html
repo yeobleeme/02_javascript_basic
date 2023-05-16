@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<title>Document</title>
+	<style>
+		* {
+			margin: 10px;
+			justify-content: center;
+			align-items: center;
+		}
+
+		p {
+			color: red;
+			display: none;
+		}
+
+	</style>
+  
+	<script>
+	$(function() {
+
+		$('#login').click(function() {
+			let len1 = $('#userid').val().length;
+		  let len2 = $('#userpw').val().length;
+			
+			if(len1 == 0) {
+				$('.msg1').css('display', 'block');
+			} else {
+				$('.msg1').css('display', 'none');
+			}
+			if(len2 == 0) {
+				$('.msg2').css('display', 'block');
+			} else {
+				$('.msg2').css('display', 'none');
+			}
+			return false;
+		})
+	})
+	</script>
+
+</head>
+<body>
+	<form action="" class="myform">
+		<fieldset>
+			<legend>로그인</legend>
+			<div>
+				<label for="userid">아이디</label>
+				<input type="text" id="userid">
+			</div>
+			<p class="msg1">아이디를 입력하세요.</p>
+			<div>
+				<label for="userpw">비밀번호</label>
+				<input type="text" id="userpw">
+			</div>
+			<p class="msg2">비밀번호를 입력하세요.</p>
+			<button id="login">로그인</button>
+		</fieldset>
+	</form>
+</body>
+</html>

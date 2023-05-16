@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		// foreach : for문과 array : 
+		// 배열.forEach (콜백함수);
+		// for ... in : for문과 object : 
+		// for ... of : for문과 array
+
+		let arr1 = ['손흥민', '이강인', '김민재', '김연경', '류현진', '홍길동']
+		console.log(`배열의 크기 = ${arr1.length}`);
+		
+		for (let i=0; i<arr1.length; i++) {
+			document.write(`${i} = ${arr1[i]}<br>`);
+		}
+
+		document.write(`<hr>`)
+
+		arr1.forEach(function(name) {
+			document.write(`${name}<br>`);
+		});
+
+		document.write(`<hr>`)
+
+		// arrow function 사용
+		arr1.forEach((name) => document.write(`${name}<br>`));
+
+		document.write(`<hr>`)
+
+		let arr2 = ['손흥민', '이강인', '김민재', '김연경', '류현진', '홍길동'];
+		arr2.forEach((x) => document.write(`${x}<br>`));
+
+		document.write(`<hr>`)
+
+		for(let fruit of arr2) {
+			document.write(`${fruit}<br>`);
+		}
+
+		document.write(`<hr>`)
+
+		let hong = {
+			name: "홍길동",
+			age: 1000,
+			addr: "한양",
+			tel: "010-9999-8888",
+		};
+    console.log(`이름 = ${hong.name}`);
+    console.log(`나이 = ${hong["age"]}`);
+    console.log(`주소 = ${hong.addr}`);
+    console.log(`전화 = ${hong.tel}`);
+
+		// for in 에서는 객체에서 key를 꺼내온다.
+		for(key in hong) {
+      document.write(`${key} = ${hong[key]}<br>`);
+		}
+		
+// 실습. 자리배치도
+// 현재 강의실의 인원수와 한 줄에 3명씩 앉을 경우 자리배치도를 출력
+// if, for(nested), table 태그
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

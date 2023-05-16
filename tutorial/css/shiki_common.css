@@ -1,0 +1,798 @@
+@charset "utf-8";
+/**
+ * base.css
+ */
+
+/* import
+--------------------------------------------------*/
+@import "//fast.fonts.com/cssapi/7e7789c4-b17d-482e-b46e-5162edc701bd.css";
+@import "init.css";
+
+
+/* html, body
+--------------------------------------------------*/
+html {
+	overflow-y: scroll;
+}
+html, body {
+	height: 100%;
+}
+body {
+	background: #ffffff;
+}
+
+
+/* siteCommonStyle
+--------------------------------------------------*/
+/* selection */
+::-moz-selection {}
+::selection {}
+
+/* a */
+a {
+	color: #999999;
+		text-decoration: none;
+		cursor: pointer;
+		-moz-transition: all 0.2s ease-out;
+		-webkit-transition: all 0.2s ease-out;
+		-o-transition: all 0.2s ease-out;
+		-ms-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
+}
+.on > a,
+a:hover {
+	color: #333333;
+}
+
+/* cap */
+.caption,
+.cap {
+	color: #999999;
+	font-size: 83.4%;
+}
+.cap {
+	padding-top: 5px;
+}
+.allcaps {
+	letter-spacing: 0.1em;
+}
+
+/* formText */
+.formText {
+	padding: 3px 2px;
+	border: #ccc solid 1px;
+}
+
+
+/* layout
+--------------------------------------------------*/
+/* wrapper */
+#wrapper {
+	position: relative;
+	width: 1034px;
+	min-height: 100%;
+	margin: 0 auto;
+	background: #ffffff;
+	color: #181818;
+	font-family: "LinotypeUniversW01-Regu", "Gothic Medium BBB", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+	line-height: 1.75;
+	text-align: left;
+}
+.wrap {
+	width: 958px;
+	margin: 0 auto;
+	padding: 0 38px;
+}
+.wrap:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+#bodyCover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	/*background-image: url(/common/imgs/loading.gif);*/
+	background-color:#ffffff;
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+html.retina #bodyCover {
+	/*background-image: url(/common/imgs/loading@x2.gif);*/
+	-webkit-background-size: 60px 10px;
+	background-size: 60px 10px;
+}
+#bodyCover.allArea {
+	z-index: 100;
+}
+
+/* header */
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	width: 100%;
+	height: 30px;
+	padding-top: 46px;
+}
+#header #logo {
+	float: left;
+}
+#header #logo a {
+	display: block;
+	overflow: hidden;
+	width: 258px;
+	height: 30px;
+	background: url(../imgs/logo.gif) no-repeat left center;
+	text-indent: -5260px;
+}
+html.drawSVG #header #logo a {
+	background-image: url(../imgs/logo.svg);
+}
+#header #menuBtn {
+	display: none;
+}
+
+#header #search {
+	float: right;
+	width: 134px;
+	height: 16px;
+	padding: 5px 0;
+	visibility: hidden;
+}
+#header #search input.text {
+	display: none;
+	float: left;
+	width: 118px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	font-family: "LinotypeUniversW01-Regu", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 16px;
+	outline: none;
+}
+#header #search input.submit {
+	display: block;
+	overflow: hidden;
+	float: right;
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: url(../imgs/icon-search.gif) no-repeat center center;
+	text-indent: -9999px;
+	cursor: pointer;
+	outline: none;
+	opacity: 0.2;
+	-moz-transition: all 0.2s ease-out;
+	-webkit-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	filter: alpha(opacity=20);
+	-ms-filter: "alpha(opacity=20)";
+}
+html.drawSVG #header #search input.submit {
+	background-image: url(../imgs/icon-search.svg);
+}
+html.drawSVG #header #search input.submit:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter: "alpha(opacity=100)";
+}
+
+
+
+
+/* navArea */
+#navArea {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	z-index: 5;
+	width: 180px;
+	height: 100%;
+	margin-left: -517px;
+	padding-left: 38px;
+}
+#navArea #navScrollArea {
+	padding-top: 97px;
+}
+html.MDN #gNavArea li a:hover {
+	padding-left: 10px;
+}
+html.MDN #gNavArea li.home a:hover,
+html.MDN #gNavArea li.on > a:hover {
+	padding-left: 0;
+}
+#navArea #gNav {
+	position: relative;
+}
+#navArea #gNav li.home {
+	display: none;
+	position: absolute;
+	top: -50px;
+}
+#navArea #gNav li.home a {
+	display: block;
+	overflow: hidden;
+	width: 26px;
+	height: 26px;
+	padding: 0;
+	background: url(../imgs/icon-home.gif) no-repeat left top;
+	text-indent: -5260px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	-ms-filter: "alpha(opacity=50)";
+}
+html.drawSVG #navArea #gNav li.home a {
+	background-image: url(../imgs/icon-home.svg) !important;
+}
+#navArea #gNav li.home a:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter: "alpha(opacity=100)";
+}
+#navArea #gNav li a {
+	display: inline-block;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 10px;
+	line-height: 1;
+	letter-spacing: 0.35em;
+}
+#navArea #gNav li .sNav {
+	display: none;
+}
+#navArea #gNav + .sNav ul {
+	display: none;
+	padding: 15px 0 0 60px;
+}
+#navArea .sNav ul li a {
+	display: inline-block;
+	padding-top: 6px;
+	padding-bottom: 5px;
+	font-size: 10px;
+	line-height: 1;
+	letter-spacing: 0.12em;
+}
+#navArea .ancNav li.on a {
+	margin-left: -24px;
+}
+#navArea #langArea {
+	margin-top: 50px;
+}
+#navArea #lang li a {
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 10px;
+	line-height: 1;
+	letter-spacing: 0.35em;
+}
+#navArea .bnr {
+	display: none;
+}
+
+/* detailNav */
+#detailNav li.on a {
+	margin-left: 12px;
+}
+
+/* container */
+#container {
+	position: relative;
+	padding: 102px 38px 150px 218px;
+	background: #ffffff;
+	font-family: "Sabon LT W01 Roman", "Ryumin Regular KL", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+html:lang(zh) #container {
+	font-family: "Sabon LT W01 Roman", SimSun, serif;
+}
+#container .webfontBold {
+	font-family: "Sabon LT W01 Roman", "Ryumin Bold KL", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+html:lang(zh) #container .webfontBold {
+	font-family: "Sabon LT W01 Roman", SimSun, serif;
+}
+#container img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* contents */
+#contents {
+}
+.scrollFade {
+	display: block;
+}
+
+/* autopager */
+#autoPagerContents {}
+#autoPagerLink,
+#autoPagerLoading {
+	display: block;
+	width: 100%;
+	height: 400px;
+}
+#autoPagerLoading {
+	background-color:#ffffff;
+	background-position:center center;
+	background-repeat:no-repeat;
+	/*background-image: url(/common/imgs/loading.gif);*/
+}
+.retina #autoPagerLoading {
+	/*background-image: url(/common/imgs/loading@x2.gif);*/
+	-webkit-background-size: 60px 10px;
+	background-size: 60px 10px;
+}
+#autoPagerLink a {
+	visibility: hidden;
+}
+
+/* entry */
+.entry {
+	position: relative;
+}
+.entry .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+}
+/* sns */
+.sns {
+	height: 16px;
+}
+.sns li {
+	float: left;
+}
+.sns li a {
+	display: block;
+	height: 16px;
+	background-image: url(../imgs/icon-sns.gif);
+	background-repeat: no-repeat;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -5260px;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+html.drawSVG .sns li a {
+	background-image: url(../imgs/icon-sns.svg);
+}
+.sns li a.facebook {
+	width: 16px;
+	background-position: left top;
+}
+.sns li a.facebook:hover {
+	background-position: left bottom;
+}
+.sns li a.twitter {
+	width: 16px;
+	margin-top: -1px;
+	background-position: right top;
+}
+.sns li a.twitter:hover {
+	background-position: right bottom;
+}
+
+/* footer */
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	padding-bottom: 22px;
+}
+#footer #copyright {
+	text-align: right;
+}
+#footer #copyright a {
+	display: inline-block;
+	padding: 2px 0 1px 30px;
+	font-size: 10px;
+	line-height: 1;
+	background: url(../imgs/copyright.png) no-repeat left top;
+}
+
+
+
+/* max-max:1033px
+--------------------------------------------------*/
+@media only screen and (max-width:1033px) {
+	/* wrapper */
+	#wrapper {
+		width: auto;
+	}
+	.wrap {
+		width: auto;
+	}
+
+	/* navArea */
+	#navArea {
+		left: 0;
+		margin-left: 0;
+	}
+}
+
+
+
+/* min-width:1034px
+--------------------------------------------------*/
+@media only screen and (min-width:1034px) {
+	/* wrapper */
+	#wrapper {
+		width: auto;
+		max-width: 1192px;
+	}
+	.wrap {
+		width: auto;
+		max-width: 1116px;
+	}
+
+	/* navArea */
+	#navArea {
+		left: 0;
+		margin-left: 0;
+	}
+}
+
+
+/* min-width:1192px
+--------------------------------------------------*/
+@media only screen and (min-width:1192px) {
+	/* navArea */
+	#navArea {
+		left: 50%;
+		margin-left: -596px;
+	}
+}
+
+
+
+/* SP
+--------------------------------------------------*/
+@media only screen and (max-width:640px) {
+	body.openMENU #wrapper {
+		overflow: hidden;
+	}
+
+	/* wrapper */
+	.wrap {
+		margin: 0 25px;
+		padding: 0;
+	}
+
+	/* header */
+	#header {
+		position: fixed;
+		height: auto;
+		padding: 21px 0;
+		background: #ffffff;
+	}
+	#header #logo {
+		position: absolute;
+		top: 14px;
+		left: 70px;
+		float: none;
+	}
+	#header #logo a {
+		width: 190px;
+		height: 30px;
+		-webkit-background-size: 190px auto;
+		background-size: 190px auto;
+	}
+	#header #menuBtn {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		top: 14px;
+		left: 13px;
+		width: 44px;
+		height: 30px;
+		background: url(../imgs/icon-menu.gif) no-repeat left top;
+		-webkit-background-size: 44px auto;
+		background-size: 44px auto;
+		text-indent: -5260px;
+		cursor: pointer;
+	}
+
+	#header #search {
+		position: relative;
+		float: none;
+		width: auto;
+		padding: 0 20px 0 0;
+	}
+	#header #search input.text {
+		float: none;
+		width: 100%;
+	}
+	#header #search input.submit {
+		position: absolute;
+		top: -7px;
+		right: -14px;
+		width: 44px;
+		height: 30px;
+		opacity: 1;
+		filter: alpha(opacity=100);
+		-ms-filter: "alpha(opacity=100)";
+	}
+
+
+	/* navArea */
+	#navArea {
+		display: none;
+		overflow: auto;
+		z-index: 1 !important;
+		width: 190px;
+		padding-left: 0;
+		background: #fafafa;
+		/* -webkit-overflow-scrolling: touch; */
+	}
+	body.openMENU #navArea {
+		display: block;
+	}
+	#navArea #navScrollArea {
+		position: relative;
+		min-height: 100%;
+		padding-top: 0;
+	}
+	#navArea li a:hover {
+		padding-left: 0;
+	}
+	#navArea #gNav {
+		position: static;
+		padding: 16px 0 122px 25px;
+	}
+	#navArea #gNav li.home {
+		display: block;
+		position: static;
+		margin-bottom: 5px;
+	}
+	#navArea #gNav li.home a {
+		background-image: url(../imgs/sp/icon-home.png);
+		-webkit-background-size: 26px auto;
+		background-size: 26px auto;
+	}
+	#navArea #gNav li a {
+		display: block;
+		padding: 10px 0 9px;
+		font-size: 11px;
+	}
+	#navArea #gNav li .sNav {
+		display: block;
+	}
+	#navArea #gNav li .sNav ul {
+		display: none;
+		padding: 14px 0 24px 27px;
+	}
+	#navArea #gNav li .sNav ul li a {
+		display: block;
+		padding: 7px 0;
+		font-size: 11px;
+		line-height: 1;
+		letter-spacing: 0.12em;
+	}
+	#navArea .ancNav li.on a {
+		margin-left: 0;
+	}
+	#navArea #langArea {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 117px;
+		margin-top: 0;
+		padding: 26px 0 16px 25px;
+	}
+	#navArea #lang li a {
+		display: block;
+		padding: 5px 0;
+		font-size: 11px;
+	}
+	#navArea .bnr {
+		display: block;
+		width: 110px;
+		margin-top: 64px;
+	}
+	#navArea .bnr li {
+		margin-top: 3px;
+	}
+	#navArea .bnr li:first-child {
+		margin-top: 0;
+	}
+	#navArea .bnr li img {
+		max-width: 100%;
+		height: auto;
+	}
+	#navArea #langArea {
+		/*margin-top: 100px;*/
+	}
+
+	/* container */
+	#container {
+		z-index: 2;
+		padding: 58px 25px 52px;
+		background: #ffffff;
+	}
+
+	/* contents */
+	/* autopager */
+	#autoPagerLink,
+	#autoPagerLoading {
+		height: 200px;
+	}
+	/* sns */
+	.sns {
+		width: 40px;
+		margin-left: auto;
+	}
+	.sns li {
+		margin-left: 8px;
+	}
+	.sns li:first-child {
+		margin-left: 0;
+	}
+
+	/* footer */
+	#footer {
+		padding-bottom: 15px;
+	}
+}
+
+
+
+/* detail
+--------------------------------------------------*/
+body.detail #container {
+	z-index: 10;
+	padding-bottom: 22px;
+}
+body.detail #container #contents {
+	display: none;
+}
+body.detail #detailNav {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 180px;
+	height: 100%;
+	margin-left: -517px;
+	padding-top: 47px;
+	padding-left: 38px;
+}
+body.detail #detailBack {
+	display: block;
+	overflow: hidden;
+	width: 26px;
+	height: 26px;
+	background: url(../imgs/icon-back.gif) no-repeat left top;
+	text-indent: -5260px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	-ms-filter: "alpha(opacity=50)";
+}
+html.drawSVG body.detail #detailBack {
+	background-image: url(../imgs/icon-back.svg) !important;
+}
+body.detail #detailBack:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	-ms-filter: "alpha(opacity=100)";
+}
+body.detail #detailNav #detailBack {
+	margin-bottom: 25px;
+}
+body.detail #detailNav .title {
+	margin-bottom: 15px;
+}
+body.detail #detailNav .ancNav {
+	font-family: "LinotypeUniversW01-Regu", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 10px;
+}
+body.detail #detailNav .ancNav li {
+	margin-top: 4px;
+}
+body.detail #detailNav .ancNav li:first-child {
+	margin-top: 0;
+}
+html.MDN body.detail #detailNav .ancNav li a {
+	display: inline-block;
+}
+html.MDN body.detail #detailNav .ancNav li a:hover {
+	padding-left: 10px;
+}
+
+
+
+/* max-max:1033px
+--------------------------------------------------*/
+@media only screen and (max-width:1033px) {
+	/* detailNav */
+	body.detail #detailNav {
+		left: 0;
+		margin-left: 0;
+	}
+}
+
+
+
+/* min-width:1034px
+--------------------------------------------------*/
+@media only screen and (min-width:1034px) {
+	/* detailNav */
+	body.detail #detailNav {
+		left: 0;
+		margin-left: 0;
+	}
+}
+
+
+/* min-width:1192px
+--------------------------------------------------*/
+@media only screen and (min-width:1192px) {
+	/* detailNav */
+	body.detail #detailNav {
+		left: 50%;
+		margin-left: -596px;
+	}
+}
+
+
+
+/* SP
+--------------------------------------------------*/
+@media only screen and (max-width:640px) {
+	body.detail #container {
+		padding-bottom: 25px;
+	}
+	body.detail #detailContents #detailBack {
+		top: 16px;
+		left: 25px;
+	}
+	body.detail #detailContents #detailBack {
+		background-image: url(../imgs/sp/icon-back.png);
+		-webkit-background-size: 26px auto;
+		background-size: 26px auto;
+	}
+	body.detail #detailNav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		height: 58px;
+		padding: 0;
+		background: #ffffff;
+	}
+	body.detail #detailNav #detailBack {
+		position: absolute;
+		top: 16px;
+		left: 25px;
+		margin-bottom: 0;
+	}
+	body.detail #detailNav .title,
+	body.detail #detailNav .ancNav {
+		display: none;
+	}
+	body.detail .booksrelated img {
+	width:150px;
+	}
+
+
+}

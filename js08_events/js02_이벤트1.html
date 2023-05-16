@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		window.onload = function() {
+
+			function whenClick() {
+				alert('문서객체가 클릭이 되었습니다.')
+			}
+			
+			
+
+			// 1. 이벤트 추가
+			let header1 = document.querySelector('#header1');
+			header1.onclick = whenClick;
+
+			let header2 = document.querySelector('#header2');
+			header2.onclick = whenClick;
+
+			let header3 = document.querySelector('#header3');
+			header3.onclick = (e) => { e.target.remove() };
+
+			// 2. 이벤트 삭제
+			header2.onclick = null;
+
+			// 실습1.
+			// header3 태그를 클릭하면 해당 객체가 삭제가 되는 onclick 이벤트 작성.
+
+			// 실습2.
+			// 임의의 img 태그를 클릭하면 상세설명내용(p태그)과 상세설명 닫기 버튼이 
+			// 나타나게 하고 상세내용 닫기 버튼을 클릭하면 상세내용이 숨겨지는 이벤트 작성.
+
+			let show = document.getElementById('btnopen');
+			btnopen.onclick = function () {
+				document.getElementById('freitaginfo').style.display = "";
+				document.getElementById('btnopen').style.display = "none";
+				document.getElementById('btnclose').style.display = "";
+			}
+			
+			let disappear = document.getElementById('btnclose');
+			btnclose.onclick = function () {
+				document.getElementById('freitaginfo').style.display = "none";
+				document.getElementById('btnopen').style.display = "";
+				document.getElementById('btnclose').style.display = "none";
+			}
+
+			// 실습3.
+			// button 클릭시에 눌린 횟수를 카운트하기
+			// button-1 클릭하면 2개가 동시에 카운트 되고
+		  // button-2 클릭하면 button-2의 횟수만 카운트하기
+			// getElementById(), Number(), innerHTML(), Number()
+			// button1.onclick -> button2.onclick을 호출
+
+			let button1 = document.getElementById('button-1');
+			let button2 = document.getElementById('button-2');
+			let result1 = Number(document.getElementById('result-1').innerHTML);
+			let result2 = Number(document.getElementById('result-2').innerHTML);
+
+			button1.onclick = button1Click;
+			button2.onclick = button2Click;
+
+			function button1Click () {
+				++result1;
+				document.getElementById('result-1').innerHTML = result1;
+				button2Click ()
+			}
+			
+			function button2Click () {
+				++result2;
+				document.getElementById('result-2').innerHTML = result2;
+			}
+			
+		}
+	</script>
+</head>
+<body>
+
+	<h3 id="header1">여기를 클릭하세요.</h3>
+	<h3 id="header2">여기를 클릭하세요.</h3>
+	<h3 id="header3" style="color: red;">여기를 클릭하세요.</h3>
+  <br>
+
+	<img src="./images/freitag.jpg" alt="noimage" 
+	  style="width: 350px; height: 260px;">
+
+	<div id="freitag">
+		<button id="btnopen">FREITAG</button>
+		<button id="btnclose" style="display: none;">close</button>
+		<p id="freitaginfo" style="display: none;">
+			낡아 버려질 것들이 프라이탁 형제에 의해<br>
+			세상에 단 하나뿐인 가방으로 다시 태어나<br>
+			실용적이면서도 도시적인 감각을 담은<br>
+			프라이탁의 가방으로 완성됩니다.
+		</p>
+	</div>
+	<br>
+	<br>
+	
+	<button id="button-1"><h3>&nbsp&nbsp button - 1 &nbsp&nbsp</h3></button>
+	<button id="button-2"><h3>&nbsp&nbsp button - 2 &nbsp&nbsp</h3></button>
+  
+	<h1>button-1 <span id="result-1">0</span></h1>
+	<h1>button-2 <span id="result-2">0</span></h1>
+  
+</body>
+</html>

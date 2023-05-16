@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<title>Document</title>
+	<style>
+		* { 
+			margin: 5px;
+		}
+
+		input[type=text].on {
+			background-color: mediumseagreen;
+			color: white;
+		}
+
+		p {
+			display: none;
+			color: red;
+		}
+
+		#nav {
+			display: none;
+			position: flex;
+			background-color: mediumpurple;
+			width: 200px;
+			height: 500px;
+		}
+
+		nav ul {
+			list-style: none;
+		}
+
+		nav ul li {
+			padding: 1em 0;
+		}
+
+
+	</style>
+
+
+	<script>
+		$(function() {
+			$('#n1 input').focus(function() {
+				$(this).addClass('on')
+			}).blur(function() {
+				$(this).removeClass('on');
+			})
+
+			$('#n2').focusin(function() {
+				$(this).children().addClass('on')
+			}).focusout(function() {
+				$(this).children().removeClass('on')
+			})
+
+			$('#n3 input').change(function() {
+				let change = confirm('값을 수정하겠습니까?');
+				if (!change) {
+					$(this).val(10);
+				}
+			})
+
+			$('#n4 input').select(function() {
+				let val = $(this).val();
+				let len = $(this).val().length
+				alert(val + '총' + len + '개의 문자를 선택했습니다.')
+			})
+
+			// 실습1. myform 에서 아이디 or 비밀번호가 입력되지 않았을 경우
+			// p.msg1, p.msg2 보이게 하거나 숨기거나 구현하기
+			// css(), display:none -> block 
+
+      $('#login').click(function() {
+				let len1 = $('#userid').val();
+				let len2 = $('#userpw').val();
+
+				if (len1 === '') {
+					$('p.msg1').css('display', 'block');
+				} else {
+					$('p.msg1').css('display', 'none');
+				}
+
+				if (len2 === '') {
+					$('p.msg2').css('display', 'block');
+				} else {
+					$('p.msg2').css('display', 'none');
+				}
+				
+				return false;
+
+			});
+
+			// 실습2. 메뉴보기/숨기기
+			// toggle(), active()
+			
+      $('#bttn').click(function() {
+				$('#nav').toggle('active');
+			})
+
+		});
+
+	</script>
+</head>
+<body>
+	<div id="n1"><input type="text" placeholder="값을 입력하세요!"></div>
+	<div id="n2"><input type="text" placeholder="값을 입력하세요!"></div>
+	<div id="n3">
+		<span>값을 수정한 후 다음 입력 요소로 입력하기</span>
+		<input type="text" placeholder="값을 입력하세요!">
+	</div>
+	<div id="n4"><input type="text" placeholder="텍스트를 드레그하세요!"></div>
+  <br>
+	<br>
+	<hr>
+	<br>
+	<br>
+
+	<form action="" class="myform">
+		<fieldset>
+			<legend>로그인</legend>
+			<div>
+				<label for="userid">아이디</label>
+				<input type="text" id="userid">
+			</div>
+			<p class="msg1">아이디를 입력하세요.</p>
+			<div>
+				<label for="userpw">비밀번호</label>
+				<input type="text" id="userpw">
+			</div>
+			<p class="msg2">비밀번호를 입력하세요.</p>
+			<button id="login">로그인</button>
+		</fieldset>
+	</form>
+
+	<br>
+	<br>
+	<hr>
+	<br>
+	<br>
+	<h1>실습2. 메뉴</h1>
+  <button id="bttn">&#9776;</button>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="#">Javascript</a></li>
+      <li><a href="#">Typescript</a></li>
+      <li><a href="#">Node.js</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
+
+</body>
+</html>

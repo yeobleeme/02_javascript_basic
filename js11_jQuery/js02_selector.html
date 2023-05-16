@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  
+	<script>
+		$(function() {
+		$('h1').css('color', 'red'); // getElementByTagName('h1').css()
+		$('p').css('color', 'green');
+		$('#target').css('color', 'orange');
+		$('h1#target').css('color', 'mediumseagreen');
+		}
+		)
+	</script>
+
+	<!-- <style>
+		h1 {color: red;}
+		h1#target {color: green;}
+	</style> -->
+
+</head>
+<body>
+	<h1>jQuery</h1>
+	<p>직접 다운로드하고 호스팅하지 않으려면 
+		CDN(Content Delivery Network)에서 jQuery를 
+		포함할 수 있습니다.</p>
+	<p id="target">Google은 jQuery를 호스팅하는 사람의 예입니다.
+		다운로드한 파일을 사용하려는 페이지와 동일한 디렉토리에 두십시오.
+		두 버전 모두 jQuery.com 에서 다운로드할 수 있습니다.</p>
+	<h1 id="target">다운로드할 수 있는 두 가지 버전의 jQuery가 있습니다.</h1>
+</body>
+</html>

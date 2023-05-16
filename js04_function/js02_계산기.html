@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		// 실습 버튼을 클릭하면 결과값을 div 태그에 출력하기
+		
+		function add () { 
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.getElementById('snum').value);
+      let result = fnum + snum;
+			document.getElementById('result').innerHTML = result;
+		}
+
+		function sub () { 
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.getElementById('snum').value);
+      let result = fnum - snum;
+			document.getElementById('result').innerHTML = result;
+		}
+		
+		function mul () { 
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.getElementById('snum').value);
+      let result = fnum * snum;
+			document.getElementById('result').innerHTML = result;
+		}
+
+		function div () { 
+			let fnum = parseInt(document.getElementById('fnum').value);
+			let snum = parseInt(document.getElementById('snum').value);
+      let result = fnum / snum;
+			document.getElementById('result').innerHTML = result;
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text" id="fnum" value="">&nbsp&nbsp
+	<input type="text" id="snum" value="">
+	<hr>
+	<input type="button" value="+" onclick="add()">&nbsp&nbsp
+	<input type="button" value="-" onclick="sub()">&nbsp&nbsp
+	<input type="button" value="*" onclick="mul()">&nbsp&nbsp
+	<input type="button" value="/" onclick="div()">
+<br>
+result = 
+	<div id="result"></div>
+	
+</body>
+</html>

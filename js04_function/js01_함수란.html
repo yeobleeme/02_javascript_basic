@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		/*
+		  함수(function)란?
+			1. 함수는 기본적으로 호출된 곳으로 처리결과를 전달한다.
+			2. 함수의 호출은 `함수명()`의 형태로 호출한다.
+			3. 함수의 소괄호 안에는 함수로 임의의 값을 전달하는 매개변수
+			    (매개값, 인자, 파라미터...)가 있을 수도 있고 없을 수도 있다. 
+			4. 사용자 함수의 정의방법
+			  1) 익명함수 : 이름이 없는 함수 : function () { ... }
+				2) 선언함수 : 이름이 잆는 함수 : function 함수명 (매개변수..) { ... } 
+
+				내장함수와 사용자(정의)함수
+				1. 내장함수 : JavaScript에서 기본적으로 제공해주는 함수
+				    예> alert, prompt, confrim ...
+				2. 사용자정의함수
+				// 익명함수 
+				// 선언함수 
+		*/
+
+// 익명함수
+		let fn01 = function () {
+			// 실행문
+			return'반환값';
+		}
+		let result1 = fn01();
+	  console.log(typeof fn01, ',', result1);
+	  console.log(`${fn01()}`);
+
+// 재사용하기 위한 함수 
+let fn02 = function (a, b) { return a + b; } 
+let result2 = fn02(10, 20);
+console.log(`10 + 20 = ${result2}`);
+console.log(`100 + 300 = ${fn02(100, 300)}`);
+
+// 선언함수
+function fn03(a,b) { return a * b; }
+let result3 = fn03(10, 20);
+console.log(`10 * 20 = ${result3}`);
+console.log(`100 * 300 = ${fn03(100, 300)}`);
+
+
+// 계산기 함수를 작성 / 선언함수, 익명함수
+// 매개변수가 3개인 calculation (연산자, 값1, 값2)
+// 연산자 + - * / % d 
+// 연산자에 따라 값1과 값2의 연산결과를 출력
+// document.write('값1 + 값2 = 결과값')
+// document.write('값1 - 값2 = 결과값')
+// document.write('값1 * 값2 = 결과값')
+// document.write('값1 / 값2 = 결과값')
+// document.write('값1 % 값2 = 결과값')
+
+let a = Number(prompt('a값을 입력하세요.', ));
+let b = Number(prompt('b값을 입력하세요.', ));
+
+function plus(a,b) { return a + b; }
+let result4 = plus(a, b);
+function minus(a,b) { return a - b; }
+let result5 = minus(a, b);
+function multiply(a,b) { return a * b; }
+let result6 = multiply(a, b);
+function dvd1(a,b) { return a / b; }
+let result7 = dvd1(a, b);
+function dvd2(a,b) { return a % b; }
+let result8 = dvd2(a, b);
+
+document.write(`a + b = ${result4}<br>`)
+document.write(`a - b = ${result5}<br>`)
+document.write(`a * b = ${result6}<br>`)
+document.write(`a / b = ${result7}<br>`)
+document.write(`a % b = ${result8}<br>`)
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

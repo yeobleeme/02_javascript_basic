@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		/*
+		  화살표함수 (Arrow Function)
+		
+
+		*/
+		// 1. 매개변수의 유무
+		let hi = function () { return 'Hello Hello'; }
+		console.log(hi());
+		
+		hi = () => { return 'Hellow Hellow' };
+		console.log(hi());
+
+		hi = () => { 'Hallow Hallow' };
+		console.log(hi());
+
+		hi = () => 'Hallowa Hallowa';
+		console.log(hi());
+
+		// 2. 매개변수가 한개만 있을 경우
+		let sayHello = function(name) { return name + 'Hi Good Morning' }
+
+		sayHello = (name) => { return name + 'Hi Good Morning' }
+		sayHello = name => name + 'Hi Good Morning'
+		
+		console.log(sayHello('HGD '));
+
+		// 3. 매개변수가 한개 이상 있을 경우
+		let 더하기 = function add(a, b) { return a + b }
+    더하기 = (a, b) => a + b;
+		console.log(더하기(10, 10));
+		
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

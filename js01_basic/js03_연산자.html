@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		/*
+      연산자 
+
+			1. 사칙연산 : + - * /
+			2. 나머지 연산 : %
+		*/
+
+		let a = 10 + 10;
+    console.log (a, typeof(a));
+
+		a = a - 5;
+		console.log (a, typeof(a));
+
+		a = a * 5;
+		console.log (a, typeof(a));
+
+		a = a / 5;
+		console.log (a, typeof(a));
+
+		a = a % 6;
+		console.log (a, typeof(a));
+
+		const pi = 3.141592;
+		console.log (pi, typeof(pi));
+
+		// 자바스크립트 등의 프로그램언어 에서는
+		// 정밀한 계선에서 실수 연산은 적합하지 않다.
+		
+		let b = 0.1 + 0.2;
+		console.log('실수 연산', b);
+
+		b = (0.1 * 10) + (0.2 * 10);
+		b = b / 10;
+		console.log('실수 연산', b);
+
+// 문자와 숫자의 연산 결과는?
+// 문자열의 연산은 더하기(+), 연결만 가능.
+
+    let str = 'asdf';
+		let num = 10;
+		let result = str + num;
+		console.log('문자열 연산 결과', result, typeof(result));
+
+		// 실습. 두 사람의 나이를 입력받아서 결과를 출력.
+		// prompt, document.write 함수를 이용
+
+    
+    
+    
+
+    
+    let name1 = prompt ('이름을 입력하세요.', '홍길동')
+		let age1 = prompt ('나이를 입력하세요.', 11);
+		
+
+		let name2 = prompt ('이름을 입력하세요.', '홍길순')
+	  let age2 = prompt ('나이를 입력하세요', 22);
+		
+		console.log(name1, name2, age1, age2);
+    console.log(typeof(age1),typeof(age2));
+
+		let sum = parseInt(age1) + parseInt(age2);
+		
+		console.log(typeof(sum));
+
+
+
+		document.write (`<h1>${name1}의 나이는 ${age1} 입니다.</h1>`);
+		document.write (`<h1>${name2}의 나이는 ${age2} 입니다.</h1>`);
+		document.write (`<h1>${name1}, ${name2} 나이의 합은 ${sum} 입니다.</h1>`);
+    document.write(`<hr>`);
+
+
+	</script>
+</head>
+<body>
+	<!-- <h3>홍길동의 나이 = ??</h3>
+	<h3>홍길순의 나이 = ??</h3>
+	<h3>두 사람 나이의 합 = ??</h3> -->
+
+
+	<h3 id="person1"></h3>
+	<h3 class="person2"></h3>
+	<h3 id="total"></h3>
+  
+	<script>
+
+		let person1 = document.querySelector('#person1');
+		let person2 = document.querySelector('.person2');
+		let total = document.querySelector('#total')
+    
+		person1.innerHTML = `ㅇ${name1}의 나이는 ${age1} 입니다.`
+		person2.innerHTML = `ㅇ${name2}의 나이는 ${age2} 입니다.`
+		total.innerHTML = `ㅇ${name1}, ${name2} 나이의 합은 ${sum} 입니다.`
+
+	</script>
+
+</body>
+</html>

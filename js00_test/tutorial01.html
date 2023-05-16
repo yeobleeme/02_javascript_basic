@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		  td {
+			border: 1px solid #222;
+			padding: 5px;
+			font-size: 0.9em;
+		}
+	</style>
+	<script>
+// 실습. 자리배치도
+// 현재 강의실의 인원수와 한 줄에 3명씩 앉을 경우 자리배치도를 출력
+// if, for(nested), table 태그
+  document.write("<h3>자리배치도</h3>");
+
+  let memNum = prompt("인원을 입력하세요.", );
+	let colNum = prompt("한 줄에 앉는 인원 입력하세요.", );
+
+	if (memNum % colNum == 0)
+	rowNum = parseInt(memNum/colNum);
+	else
+	rowNum = parseFloat(memNum/colNum) + 1;
+
+	document.write("<table>");
+		for(let i=0; i<rowNum; i++) {
+			document.write("<tr>");
+				for(let j=1; j<=colNum; j++) {
+					seatNo = i * colNum + j;
+					if(seatNo > memNum)
+					break;
+					
+					document.write("<td>자리" + seatNo + "</td>");
+				}
+				document.write("</tr>");
+		}
+		document.write("</table>");
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
